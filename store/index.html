@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REALM OF MOON — Official Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;900&family=Geist+Mono:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAV ─────────────────────────────────────────────────────────── -->
+  <nav class="nav">
+    <span class="nav-logo">ᴿᴱᴬᴸᴹ ᴼᶠ ᴹᴼᴼᴺ</span>
+    <ul class="nav-links">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#collection">Collection</a></li>
+      <li><a href="#about">About</a></li>
+    </ul>
+    <button class="nav-cart" aria-label="Cart">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <path d="M16 10a4 4 0 01-8 0"/>
+      </svg>
+      <span class="cart-count">0</span>
+    </button>
+  </nav>
+
+  <!-- ── HERO ──────────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-content">
+      <p class="hero-label">NCR · OFFICIAL STORE · 2026</p>
+      <h1 class="hero-title">REALM<br/>OF MOON</h1>
+      <p class="hero-sub">Where chaos is the canvas. Every drop is a statement.</p>
+      <a href="#gallery" class="btn-primary">View Gallery</a>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>SCROLL</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ───────────────────────────────────────────────────────── -->
+  <section class="gallery" id="gallery">
+    <div class="section-header">
+      <p class="section-label">001 / FEATURED ARTWORK</p>
+      <h2 class="section-title">The Collection</h2>
+    </div>
+
+    <div class="gallery-grid">
+
+      <!-- Card 1 -->
+      <div class="art-card" data-index="0">
+        <div class="art-card-inner">
+          <div class="art-frame">
+            <div class="art-neon-border"></div>
+            <img
+              src="assets/art/realm-01.jpg"
+              alt="Realm of Moon — Artwork 01"
+              class="art-img"
+              loading="eager"
+            />
+            <div class="art-overlay">
+              <span class="art-number">01</span>
+              <p class="art-tag">FAITH / URBAN SURREALISM</p>
+            </div>
+          </div>
+          <div class="art-info">
+            <div class="art-info-top">
+              <h3 class="art-name">REALM OF MOON<br/><em>Faith Drop</em></h3>
+              <span class="art-edition">ED. 001</span>
+            </div>
+            <p class="art-desc">
+              A figure crowned by a shark — emblem of predatory grace and spiritual weight.
+              Heavy outlines born from urban ink culture, bleeding neon life.
+            </p>
+            <div class="art-actions">
+              <button class="btn-secondary" onclick="openModal(0)">View Full</button>
+              <button class="btn-buy" onclick="addToCart('Faith Drop', 320000)">
+                <span>Rp 320.000</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="art-card" data-index="1">
+        <div class="art-card-inner">
+          <div class="art-frame">
+            <div class="art-neon-border art-neon-border--magenta"></div>
+            <img
+              src="assets/art/realm-02.jpg"
+              alt="Realm of Moon — Artwork 02"
+              class="art-img"
+              loading="eager"
+            />
+            <div class="art-overlay">
+              <span class="art-number">02</span>
+              <p class="art-tag">LEAVING / FATUM BRUTUM</p>
+            </div>
+          </div>
+          <div class="art-info">
+            <div class="art-info-top">
+              <h3 class="art-name">REALM OF MOON<br/><em>Leaving</em></h3>
+              <span class="art-edition">ED. 002</span>
+            </div>
+            <p class="art-desc">
+              Amor Fati — love of fate. A seated figure mid-departure, surrounded by
+              glitch-objects and ghost fire. Surrender rendered as fine art.
+            </p>
+            <div class="art-actions">
+              <button class="btn-secondary" onclick="openModal(1)">View Full</button>
+              <button class="btn-buy" onclick="addToCart('Leaving', 320000)">
+                <span>Rp 320.000</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /gallery-grid -->
+  </section>
+
+  <!-- ── COLLECTION / PRODUCTS ─────────────────────────────────────────── -->
+  <section class="collection" id="collection">
+    <div class="section-header">
+      <p class="section-label">002 / WEARABLES</p>
+      <h2 class="section-title">Wear the Canvas</h2>
+    </div>
+
+    <div class="product-grid">
+
+      <div class="product-card" data-artwork="0">
+        <div class="product-img-wrap">
+          <div class="product-art-thumb" style="--art-src: url('assets/art/realm-01.jpg')"></div>
+          <div class="product-type-badge">OVERSIZED TEE</div>
+        </div>
+        <div class="product-info">
+          <span class="product-label">FAITH DROP · 001</span>
+          <h4 class="product-name">Shark Faith — Oversized Tee</h4>
+          <div class="product-footer">
+            <span class="product-price">Rp 320.000</span>
+            <button class="btn-buy-sm" onclick="addToCart('Shark Faith Tee', 320000)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-artwork="0">
+        <div class="product-img-wrap">
+          <div class="product-art-thumb" style="--art-src: url('assets/art/realm-01.jpg')"></div>
+          <div class="product-type-badge">HOODIE</div>
+        </div>
+        <div class="product-info">
+          <span class="product-label">FAITH DROP · 001</span>
+          <h4 class="product-name">Shark Faith — Hoodie</h4>
+          <div class="product-footer">
+            <span class="product-price">Rp 520.000</span>
+            <button class="btn-buy-sm" onclick="addToCart('Shark Faith Hoodie', 520000)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-artwork="1">
+        <div class="product-img-wrap">
+          <div class="product-art-thumb" style="--art-src: url('assets/art/realm-02.jpg')"></div>
+          <div class="product-type-badge">OVERSIZED TEE</div>
+        </div>
+        <div class="product-info">
+          <span class="product-label">LEAVING · 002</span>
+          <h4 class="product-name">Fatum Brutum — Oversized Tee</h4>
+          <div class="product-footer">
+            <span class="product-price">Rp 320.000</span>
+            <button class="btn-buy-sm" onclick="addToCart('Fatum Brutum Tee', 320000)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card" data-artwork="1">
+        <div class="product-img-wrap">
+          <div class="product-art-thumb" style="--art-src: url('assets/art/realm-02.jpg')"></div>
+          <div class="product-type-badge">TOTE BAG</div>
+        </div>
+        <div class="product-info">
+          <span class="product-label">LEAVING · 002</span>
+          <h4 class="product-name">Fatum Brutum — Tote Bag</h4>
+          <div class="product-footer">
+            <span class="product-price">Rp 175.000</span>
+            <button class="btn-buy-sm" onclick="addToCart('Fatum Brutum Tote', 175000)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────────────────────────────── -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="section-label">003 / MANIFESTO</p>
+        <h2 class="about-title">Born from the friction<br/>between noise and silence.</h2>
+        <p class="about-body">
+          REALM OF MOON is a wearable art label. Every piece starts as a raw,
+          maximalist artwork — chaotic, inked, surrealist — then gets contained
+          inside the most minimal, clinical frame possible. The garment is
+          the museum. Your body is the wall.
+        </p>
+        <p class="about-body">
+          Limited drops. Original art. No reprints.
+        </p>
+      </div>
+      <div class="about-visual">
+        <div class="about-neon-block">
+          <span class="about-neon-text">NCR</span>
+          <div class="about-palette">
+            <span style="--c:#00FFE6"></span>
+            <span style="--c:#FF14AA"></span>
+            <span style="--c:#D2FF00"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-logo">REALM OF MOON</span>
+        <p>Official Store · 2026</p>
+      </div>
+      <div class="footer-links">
+        <a href="#">Instagram</a>
+        <a href="#">Size Guide</a>
+        <a href="#">Shipping</a>
+        <a href="#">Contact</a>
+      </div>
+      <p class="footer-copy">© 2026 Realm of Moon. All artwork original.</p>
+    </div>
+  </footer>
+
+  <!-- ── LIGHTBOX MODAL ─────────────────────────────────────────────────── -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" onclick="closeModal()"></div>
+    <div class="modal-inner">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <img class="modal-img" src="" alt="" />
+      <div class="modal-caption"></div>
+    </div>
+  </div>
+
+  <!-- ── CART TOAST ─────────────────────────────────────────────────────── -->
+  <div class="cart-toast" id="cartToast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

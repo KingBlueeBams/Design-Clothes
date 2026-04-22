@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;700;900&family=Geist+Mono:wght@300;400;600&family=Outfit:wght@300;400;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-ground text-white font-body selection:bg-neon-cyan selection:text-ink overflow-x-hidden;
+    cursor: none;
+  }
+  a, button, input, select, textarea {
+    cursor: none;
+  }
+}
+
+@layer utilities {
+  .bg-grid {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(160, 155, 148, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(160, 155, 148, 0.05) 1px, transparent 1px);
+  }
+  
+  .crosshairs::before,
+  .crosshairs::after,
+  .crosshairs-inner::before,
+  .crosshairs-inner::after {
+    content: '';
+    @apply absolute border-ghost opacity-40;
+  }
+  
+  /* Top Left */
+  .crosshairs::before {
+    top: 2rem; left: 2rem;
+    width: 20px; height: 20px;
+    border-top: 1px solid; border-left: 1px solid;
+  }
+  
+  /* Top Right */
+  .crosshairs::after {
+    top: 2rem; right: 2rem;
+    width: 20px; height: 20px;
+    border-top: 1px solid; border-right: 1px solid;
+  }
+
+  /* Bottom Left */
+  .crosshairs-inner::before {
+    bottom: 2rem; left: 2rem;
+    width: 20px; height: 20px;
+    border-bottom: 1px solid; border-left: 1px solid;
+  }
+
+  /* Bottom Right */
+  .crosshairs-inner::after {
+    bottom: 2rem; right: 2rem;
+    width: 20px; height: 20px;
+    border-bottom: 1px solid; border-right: 1px solid;
+  }
+}
