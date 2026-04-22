@@ -4,8 +4,8 @@ export default function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-ground bg-grid pt-32">
       {/* Registration Crosshairs */}
-      <div className="absolute inset-0 pointer-events-none crosshairs crosshairs-inner"></div>
-      
+      <div className="absolute inset-0 pointer-events-none crosshairs crosshairs-inner z-10"></div>
+
       <div className="relative z-20 w-full max-w-[90vw] mx-auto flex flex-col items-center justify-center text-center pb-24">
         
         {/* Microscopic Coordinate Label */}
@@ -22,12 +22,13 @@ export default function Hero() {
           </p>
         </motion.div>
 
-        {/* Monumental Title */}
+        {/* Monumental Title with Glitch */}
         <motion.h1 
           initial={{ opacity: 0, scale: 0.95 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
-          className="font-monumental text-monumental font-black leading-[0.8] tracking-tighter text-white mix-blend-difference"
+          className="font-monumental text-monumental font-black leading-[0.8] tracking-tighter text-white mix-blend-difference glitch-text"
+          data-text="REALM OF MOON"
         >
           REALM<br/>OF MOON
         </motion.h1>
@@ -55,8 +56,6 @@ export default function Hero() {
         </motion.a>
 
       </div>
-
-
     </section>
   );
 }
